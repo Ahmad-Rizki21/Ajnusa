@@ -10,9 +10,9 @@ function Services() {
                 description: "Solusi komunikasi satelit terdepan untuk konektivitas global",
                 features: ["Ka-Band & Ku-Band", "Auto-Pointing System", "Weather Resistant", "24/7 Monitoring"],
                 details: {
-                    overview: "Teknologi VSAT (Very Small Aperture Terminal) terdepan dengan coverage nasional dan internasional",
-                    specifications: ["Bandwidth: 64 Kbps - 100 Mbps", "Latency: <600ms", "Availability: 99.5%", "Antenna: 0.75m - 3.8m"],
-                    applications: ["Remote Office Connectivity", "Disaster Recovery", "Maritime Communications", "Mining Operations"]
+                    overview: "Menggunakan teknologi VSAT TDM/TDMA, Artacom – NET digunakan untuk aplikasi point-to-multipoint yang menggunakan bandwidth kecil. Teknologi ini sangat cocok untuk aplikasi yang terpusat, seperti aplikasi perbankan dan asuransi yang menggunakan protocolX.25, SDLC dan IP.",
+                    specifications: ["Outroute (Hub to Remote) : Up to 512 Kbps", "Inroute (Remote to Hub) : 19.2 up to 256 Kbps", "Interface : RS 449, V35, RS 232, Ethernet", "Protocol : X.25, X.28, SDLC, TCP/IP"],
+                    applications: ["Bandwidth sharing untuk inbound-outbound", "Multiple legacy protocol support", "Centralized applications", "Centralized NMS (Network Monitoring System)"]
                 }
             },
             {
@@ -34,9 +34,9 @@ function Services() {
                 description: "Koneksi fiber optic berkecepatan tinggi dengan reliabilitas maksimal",
                 features: ["Up to 100 Gbps", "Low Latency", "High Reliability", "Scalable Bandwidth"],
                 details: {
-                    overview: "Infrastruktur fiber optic dengan teknologi terbaru untuk kebutuhan bandwidth tinggi dan latensi rendah",
-                    specifications: ["Speed: 10 Mbps - 100 Gbps", "Distance: Up to 80km", "Uptime: 99.9%", "Fiber Type: Single/Multi-mode"],
-                    applications: ["Data Center Connectivity", "High-Speed Internet", "Video Streaming", "Cloud Services"]
+                    overview: "Jakinet & Jelantik adalah layanan Internet Service Provider (ISP) dan broadband berbasis Fiber Optic",
+                    specifications: ["Speed: 10 Mbps - 50 Mbps", "Interface: Ethernet", "Uptime: 99.9%", "Coverage: Khusus rusun DKI Jakarta & Jabodetabek"],
+                    applications: ["Data Center Connectivity", "High-Speed Internet", "Video Streaming", "Dukungan teknis 24/7"]
                 }
             },
             {
@@ -46,21 +46,21 @@ function Services() {
                 description: "Teknologi TDM-TDMA dengan bandwidth besar untuk aplikasi TCP/IP",
                 features: ["Up to 96 Mbps Outroute", "Up to 1.4 Mbps Inroute", "Interface Ethernet", "Protocol TCP/IP"],
                 details: {
-                    overview: "Layanan broadband satelit dengan teknologi TDM-TDMA untuk aplikasi bisnis dan enterprise",
-                    specifications: ["Outbound: Up to 96 Mbps", "Inbound: Up to 1.4 Mbps", "Interface: Ethernet", "CIR: Guaranteed"],
-                    applications: ["Internet Access", "VoIP Services", "Video Conferencing", "Remote Access"]
+                    overview: "Layanan broadband satelit dengan teknologi TDM-TDMA untuk aplikasi bisnis dan enterprise Sesuai untuk aplikasi yang terpusat dengan banyak remote dan dengan data traffic rendah sampai sedang.",
+                    specifications: ["Outbound: Up to 96 Mbps", "Inbound: Up to 1.4 Mbps", "Interface: Ethernet", "Protocol : TCP/IP"],
+                    applications: ["Aplikasi berbasis IP", "Fasilitas NMS", "Tersedia Ethernet Port pada modem VSAT", "Tersedia fasilitas TCP spoofing", "Bandwidth sharing untuk inbound & outbound"]
                 }
             },
             {
-                title: "Mobile VSAT",
+                title: "Artacom Link",
                 icon: "fas fa-satellite",
                 color: "from-orange-500 to-orange-600",
-                description: "VSAT mobile dengan teknologi AUPC dan ACM untuk mobilitas tinggi", 
-                features: ["64 kbps – 2 Mbps", "Coverage Indonesia", "One Push Antenna", "24x7x365 Service"],
+                description: "SCPC (Single Channel per Carrier)", 
+                features: ["User data rate : 19.2 Kbps – 10 Mbps", "Modulation : BPSK, QPSK, OQPSK and turbo codec", "Data Interface : RS-449, V35, RS232, Ethernet", "Beroperasi pada Ku-band dan C-band"],
                 details: {
-                    overview: "Solusi komunikasi mobile yang dapat beroperasi dari berbagai lokasi dengan setup yang mudah",
-                    specifications: ["Speed: 64 Kbps - 2 Mbps", "Setup Time: <15 minutes", "Power: 12V DC", "Weight: <50kg"],
-                    applications: ["Emergency Response", "Field Operations", "Temporary Sites", "Event Communications"]
+                    overview: "menggunakan teknologi SCPC (Single Channel per Carrier). SCPC adalah teknologi VSAT yang menggunakan dedicated bandwidth berkualitas tinggi karena menggunakan kanal tersendiri yang memberikan jaminan kualitas layanan maksimal untuk komunikasi data, voice, Point-of-Sales (PoS) atau video conference secara point-to-point.",
+                    specifications: ["User data rate : 19.2 Kbps – 10 Mbps", "Modulation : BPSK, QPSK, OQPSK and turbo codec", "Data Interface : RS-449, V35, RS232, Ethernet", "Beroperasi pada Ku-band dan C-band"],
+                    applications: ["Single hop connectivity", "Aplikasi yang dedicated", "Transparent protocol", "Konfigurasi point-to-point dan point-to-multipoint"]
                 }
             },
             {
@@ -70,7 +70,7 @@ function Services() {
                 description: "Virtual Network Service untuk konektivitas aman antar lokasi",
                 features: ["Any-to-Any Connectivity", "QOS & SLA", "Network Monitoring", "High Security"],
                 details: {
-                    overview: "Jaringan privat virtual yang aman dengan enkripsi end-to-end dan monitoring 24/7",
+                    overview: "Lebih dikenal VNS, adalah sebuah cara aman untuk mengakseslocal area network perusahaan termasuk kantor-kantor cabangdan Data Centernya yang memiliki jarak geografis luas, dengan menggunakan jaringan umum untuk melakukan transmisi data paket secara pribadi (private),",
                     specifications: ["Encryption: AES-256", "Tunneling: IPSec", "QoS: Guaranteed", "Monitoring: Real-time"],
                     applications: ["Branch Office Connection", "Remote Work", "Secure Data Transfer", "Cloud Access"]
                 }
@@ -166,7 +166,7 @@ function Services() {
                                             </ul>
                                         </div>
                                         <div>
-                                            <h4 className="text-xl font-bold text-gray-800 mb-4">Applications</h4>
+                                            <h4 className="text-xl font-bold text-gray-800 mb-4">Fitur / Support</h4>
                                             <ul className="space-y-2">
                                                 {selectedService.details.applications.map((app, idx) => (
                                                     <li key={idx} className="flex items-center text-gray-600">

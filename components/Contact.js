@@ -511,7 +511,7 @@ function Contact() {
                     key: 'why-grid',
                     className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
                 }, [
-                    { icon: "fas fa-award", text: "Pengalaman 20+ tahun di bidang satelit", color: "from-yellow-400 to-orange-500" },
+                    { icon: "fas fa-award", text: "Pengalaman 10+ tahun di bidang satelit", color: "from-yellow-400 to-orange-500" },
                     { icon: "fas fa-globe-asia", text: "Coverage seluruh Indonesia", color: "from-green-400 to-emerald-500" },
                     { icon: "fas fa-headset", text: "Layanan 24/7 support", color: "from-blue-400 to-cyan-500" },
                     { icon: "fas fa-rocket", text: "Teknologi terdepan", color: "from-purple-400 to-pink-500" },

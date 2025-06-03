@@ -48,14 +48,14 @@ function Footer() {
                             
                             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
                                 PT. Artacomindo Jejaring Nusa menyediakan solusi <strong>VSAT, SD-WAN, dan Fiber Optic</strong> 
-                                terpercaya dengan pengalaman lebih dari <strong>20 tahun</strong> melayani enterprise Indonesia.
+                                terpercaya dengan pengalaman lebih dari <strong>10 tahun</strong> melayani enterprise Indonesia.
                             </p>
 
                             <div className="flex flex-wrap gap-3">
                                 <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                                     <span className="text-sm font-medium">
                                         <i className="fas fa-award text-yellow-400 mr-2"></i>
-                                        20+ Years Experience
+                                        10+ Years Experience
                                     </span>
                                 </div>
                                 <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -110,7 +110,11 @@ function Footer() {
                                     </div>
                                     <a href="https://www.ajnusa.com" target="_blank" rel="noopener noreferrer"
                                        className="text-gray-300 hover:text-white transition-colors">
-                                        www.ajnusa.com
+                                           www.ajnusa.com
+                                    </a>
+                                    <a href="https://www.jelantik.com" target="_blank" rel="noopener noreferrer"
+                                       className="text-gray-300 hover:text-white transition-colors">
+                                    |  www.jelantik.com
                                     </a>
                                 </div>
                                 

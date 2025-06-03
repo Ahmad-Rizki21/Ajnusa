@@ -21,8 +21,14 @@ function Header() {
             }
         };
 
+        const openPricingPage = () => {
+            window.open('pricing.html', '_blank');
+            setIsMenuOpen(false);
+        };
+
         const services = [
-            "VSAT Solutions", "SD-WAN Network", "Fiber Optic", "Layanan Broadband", "Mobile VSAT", "VNS Service"
+            "VSAT Solutions", "SD-WAN Network", "Fiber Optic", 
+            "Layanan Broadband", "Mobile VSAT", "VNS Service"
         ];
 
         return (
@@ -36,20 +42,26 @@ function Header() {
                 }`}
             >
                 <div className="container mx-auto px-4">
-                    <div className="flex justify-between items-center py-4"> {/* Increased py-2 to py-4 */}
-                        <div className="flex items-center space-x-6"> {/* Increased space-x-4 to space-x-6 */}
-                            <div className="w-20 h-20">
-                                <img src="/images/artacom.png" alt="Artacom Logo" className="w-full h-full object-contain" />
+                    <div className="flex justify-between items-center py-4">
+                    <div className="flex items-center space-x-4 group">
+                            <div className="relative">
+                                {/* Subtle glow effect */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 to-purple-400/30 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                             </div>
-                            <div>
-                                <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-                                    Artacom
-                                </h1>
-                                <p className="text-sm text-gray-500 font-medium">Jejaring Nusa</p>
+                            <div className="flex items-center space-x-6">
+                                <div className="w-20 h-20">
+                                    <img src="/images/artacom.png" alt="Artacom Logo" className="w-full h-full object-contain" />
+                                </div>
+                                <div>
+                                    <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                                        Artacom
+                                    </h1>
+                                    <p className="text-sm text-gray-500 font-medium">Jejaring Nusa</p>
+                                </div>
                             </div>
                         </div>
 
-                        <nav className="hidden md:flex space-x-16"> {/* Increased space-x-12 to space-x-16 */}
+                        <nav className="hidden md:flex space-x-12">
                             {['HOME', 'ABOUT'].map((item, index) => (
                                 <button
                                     key={index}
@@ -65,19 +77,17 @@ function Header() {
                                 onMouseEnter={() => setIsLayananOpen(true)}
                                 onMouseLeave={() => setIsLayananOpen(false)}
                             >
-                                <button
-                                    className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 group"
-                                >
+                                <button className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 group">
                                     LAYANAN
                                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
                                 </button>
                                 {isLayananOpen && (
-                                    <div className="absolute top-full mt-3 w-48 bg-white shadow-lg rounded-lg py-3 z-10"> {/* Increased mt-2 to mt-3, py-2 to py-3 */}
+                                    <div className="absolute top-full mt-3 w-48 bg-white shadow-lg rounded-lg py-3 z-10">
                                         {services.map((service, index) => (
                                             <button
                                                 key={index}
                                                 onClick={() => scrollToSection('services')}
-                                                className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium" // Increased py-2 to py-3
+                                                className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                                             >
                                                 {service}
                                             </button>
@@ -85,10 +95,25 @@ function Header() {
                                     </div>
                                 )}
                             </div>
+                            <button
+                                onClick={openPricingPage}
+                                className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 group flex items-center"
+                            >
+                                HARGA
+                                <i className="fas fa-external-link-alt ml-1 text-xs"></i>
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                            </button>
+                            <button
+                                onClick={() => scrollToSection('network-map')}
+                                className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 group"
+                            >
+                                NETWORK
+                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                            </button>
                             {['KLIEN', 'CONTACT'].map((item, index) => (
                                 <button
                                     key={index}
-                                    onClick={() => scrollToSection(item.toLowerCase())}
+                                    onClick={() => scrollToSection(item.toLowerCase() === 'klien' ? 'clients' : item.toLowerCase())}
                                     className="relative text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 group"
                                 >
                                     {item}
@@ -107,20 +132,30 @@ function Header() {
 
                     {isMenuOpen && (
                         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
-                            <nav className="py-4 space-y-2"> {/* Increased space-y-1 to space-y-2 */}
-                                {['HOME', 'ABOUT', 'LAYANAN', 'KLIEN', 'CONTACT'].map((item, index) => (
+                            <nav className="py-4 space-y-2">
+                                {['HOME', 'ABOUT', 'LAYANAN', 'NETWORK', 'KLIEN', 'CONTACT'].map((item, index) => (
                                     <button
                                         key={index}
                                         onClick={() =>
                                             scrollToSection(
-                                                item.toLowerCase() === 'layanan' ? 'services' : item.toLowerCase()
+                                                item.toLowerCase() === 'layanan' ? 'services' :
+                                                item.toLowerCase() === 'klien' ? 'clients' :
+                                                item.toLowerCase() === 'network' ? 'network-map' :
+                                                item.toLowerCase()
                                             )
                                         }
-                                        className="block w-full text-left px-4 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium" // Increased py-3 to py-4
+                                        className="block w-full text-left px-4 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                                     >
                                         {item}
                                     </button>
                                 ))}
+                                <button
+                                    onClick={openPricingPage}
+                                    className="block w-full text-left px-4 py-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium flex items-center"
+                                >
+                                    HARGA
+                                    <i className="fas fa-external-link-alt ml-2 text-xs"></i>
+                                </button>
                             </nav>
                         </div>
                     )}
